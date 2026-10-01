@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Desafio do Cronômetro</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<header class="brand"><img src="assets/logo.svg" alt="" width="40" height="40"><h1>Desafio do Cronômetro</h1></header>
+<div class="seg" role="group" aria-label="Modo">
+<button id="mV" aria-pressed="true">Visível</button>
+<button id="mB" aria-pressed="false">Às cegas</button>
+</div>
+<div class="target">
+<label>Minutos<input id="tm" type="number" min="0" max="59" value="0" inputmode="numeric"></label><span>:</span>
+<label>Segundos<input id="ts" type="number" min="0" max="59" value="10" inputmode="numeric"></label><span>:</span>
+<label>Décimos<input id="tc" type="number" min="0" max="99" value="0" inputmode="numeric"></label>
+</div>
+<div class="clock"><div id="time">00:00:00</div><div class="sub" id="sub">Meta: 00:10:00</div></div>
+<button id="go">Começar</button>
+<div id="res" aria-live="polite">Escolha o modo, defina a meta e tente parar no tempo certo.</div>
+<div class="hist" id="hist"></div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
